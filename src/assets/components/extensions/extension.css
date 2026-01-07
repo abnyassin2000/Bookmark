@@ -1,0 +1,30 @@
+p{
+    color: var(--Gray);
+}
+.extensions{
+    margin-top: 10rem;
+}
+.extensions .info{
+    text-align: center;
+}
+.extensions .info h2{
+    color: var(--Dark);
+    font-size: 28px;
+}
+.extensions .info p{
+    width: 45%;
+    margin: auto;
+    line-height: 1.4;
+    color: var(--Gray);
+    font-size: 16px;
+} 
+
+@media (max-width: 768px){
+    .extensions .info h2{
+        font-size: 22px;
+    }
+    .extensions .info p{
+        width: 90%;
+        font-size: 14px;
+    }
+}

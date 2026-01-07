@@ -1,0 +1,31 @@
+.fac {
+  text-align: center;
+  margin-top: 6rem;
+}
+.fac .info h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--Dark);
+}
+.fac .info p {
+  width: 40%;
+  margin: auto;
+  line-height: 1.5;
+}
+.quesions {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.fac button {
+  margin-top: 3rem;
+}
+@media (max-width: 768px) {
+  .fac .info h1 {
+    font-size: 24px;
+  }
+  .fac .info p {
+    width: 90%;
+  }
+}

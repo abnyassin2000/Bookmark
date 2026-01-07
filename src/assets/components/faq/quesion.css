@@ -1,0 +1,62 @@
+.quesions .quesion .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.quesions .quesion .header .icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quesions .quesion .header .icons i{
+  font-size: 20px;
+  color: var(--Blue600);
+  line-height: 0;
+  cursor: pointer;
+  display: none;
+}
+.quesions .quesion .header .icons i.active{
+  display: block;
+}
+.quesions .quesion .header .icons i.fa-arrow-down.active{
+  color: var(--Blue600);
+}
+.quesions .quesion .header .icons i.fa-arrow-up.active{
+  color: var(--Red400);
+}
+.quesions .quesion .header:hover h4 {
+  color: var(--Red400);
+}
+.quesions .quesion {
+  margin: 1px;
+  border-top: 1px solid var(--Gray);
+}
+.quesions .quesion .header h4 {
+  color: var(--Dark);
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.quesions .quesion .answer{
+  display: none;
+}
+.quesions .quesion .answer.active{
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.quesions .quesion .answer p {
+  line-height: 1.8;
+  text-align: start;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

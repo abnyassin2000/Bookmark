@@ -1,0 +1,135 @@
+:root {
+  --Blue600: hsl(231, 69%, 60%);
+  --Red400: hsl(0, 94%, 66%);
+  --Dark: #242a45;
+  --Gray: #9194a1;
+}
+
+/* container */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========== NAV BAR ========== */
+.nav-bar {
+  padding: 1.5rem 0;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.nav-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav list */
+.nav-bar .nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-bar .nav ul li {
+  list-style: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--Dark);
+  cursor: pointer;
+  position: relative;
+  transition: .3s;
+}
+
+/* underline hover */
+.nav-bar .nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--Red400);
+  transition: .3s;
+}
+
+.nav-bar .nav ul li:hover::after {
+  width: 100%;
+}
+
+/* button */
+.nav-bar .nav ul li.btn {
+  background: var(--Red400);
+  color: #fff;
+  padding: .6rem 1.8rem;
+  border-radius: 5px;
+  border: 1px solid var(--Red400);
+}
+
+.nav-bar .nav ul li.btn::after {
+  display: none;
+}
+
+.nav-bar .nav ul li.btn:hover {
+  background: transparent;
+  color: var(--Red400);
+}
+
+/* menu icon */
+.icons {
+  display: none;
+  cursor: pointer;
+}
+
+.icons img {
+  width: 22px;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+
+  .icons{
+    display: block;
+    z-index: 10000;
+  }
+  .icons img{
+    display: none;
+  }
+  .icons img.active{
+    display: block;
+  }
+
+  .nav-bar .nav {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    display: none;
+    width: 100%;
+    background: #fff;
+    transform: translateY(-150%);
+    transition: .4s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,.1);
+  }
+
+  .nav-bar .nav.active {
+    transform: translateY(150%);
+    display: block;
+  }
+
+  .nav-bar .nav ul {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .nav-bar .nav ul li {
+    margin: 1rem 0;
+    font-size: 16px;
+    display: block;
+  }
+
+  .nav-bar .nav ul li.btn {
+    width: 80%;
+    text-align: center;
+  }
+}
